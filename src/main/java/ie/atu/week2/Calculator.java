@@ -17,10 +17,7 @@ public class Calculator {
         System.out.println("Please enter a second number: ");
         double secondNum = scan1.nextDouble();
         System.out.println("You entered " + secondNum);
-        if (secondNum == 0)
-        {
-            System.out.println("This could cause a divide by 0 error");
-        }
+
 
         System.out.print("Choose an operation (add, subtract, multiply, divide) : ");
         String operation = scan1.next();
@@ -40,6 +37,10 @@ public class Calculator {
             }
 
             case "divide" ->{
+                if (secondNum == 0)
+                {
+                    System.out.println("\nSince the second number is 0\nThis could cause a divide by 0 error");
+                }
                 yield firstNum / secondNum;
             }
 
